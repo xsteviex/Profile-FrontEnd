@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-2 sidebar">
+            <div class="col-sm-2 sidebarWrapper">
+                <h3>Steve Botello</h3>
+                <img src="images/avatar.jpg" />
+                <br />
+                <nav>
+                    <ul>
+                        <li><a [routerLink]="['Home']">home</a></li>
+                        <li><a [routerLink]="['Resume']">resume</a></li>
+                        <li><a [routerLink]="['Projects']">projects</a></li>
+                        <li><a [routerLink]="['Contact']">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>    
+    <div class="section">
+        <div class = "container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 sectionWrapper">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
