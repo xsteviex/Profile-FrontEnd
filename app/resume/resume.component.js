@@ -9,17 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
+var resume_1 = require('./resume');
+var resume_service_1 = require('./resume.service');
 var ResumeComponent = (function () {
-    function ResumeComponent() {
-        this.body = "This is the about page!";
+    function ResumeComponent(_resumeService) {
+        this._resumeService = _resumeService;
+        this.myResume = new resume_1.Resume();
     }
+    ResumeComponent.prototype.getResume = function () {
+        var _this = this;
+        this._resumeService.getResume().then(function (r) { return _this.myResume = r; });
+    };
+    ResumeComponent.prototype.ngOnInit = function () {
+        this.getResume();
+    };
     ResumeComponent = __decorate([
         core_1.Component({
             selector: 'resume',
             templateUrl: 'app/resume/resume.html',
-            styleUrls: ['app/resume/resume.css', 'app/shared/section.css']
+            styleUrls: ['app/resume/resume.css', 'app/shared/section.css'],
+            providers: [resume_service_1.ResumeService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [resume_service_1.ResumeService])
     ], ResumeComponent);
     return ResumeComponent;
 }());
