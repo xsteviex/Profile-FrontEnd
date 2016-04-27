@@ -22,8 +22,10 @@
         <div class="col-xs-12">
             <p><strong>{{work.Company}}</strong> <span class="pull-right">{{work.Dates}}</span><br /><strong>{{work.Title}}</strong></p>
             <p>{{work.Description}}</p>        
-            <ul *ngFor="#accomplishment of work.Accomplishments">
-                <li>{{accomplishment}}</li>
+            <ul>
+                <li *ngFor="#accomplishment of work.Accomplishments">
+                    {{accomplishment}}
+                </li>
             </ul>
         </div>
     </div>
@@ -33,8 +35,10 @@
     <div *ngFor="#school of myResume.EducationHistory" class="row">
         <div class="col-xs-12">
             <p><strong>{{school.Degree}}</strong> <span class="pull-right">{{school.School}}</span></p>            
-            <ul *ngFor="#accomplishment of school.Accomplishments">
-                <li>{{accomplishment}}</li>
+            <ul>
+                <li *ngFor="#accomplishment of school.Accomplishments">
+                    {{accomplishment}}
+                </li>
             </ul>
         </div>
     </div>
