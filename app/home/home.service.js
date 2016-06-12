@@ -10,18 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('angular2/core');
 var http_1 = require('angular2/http');
-var ResumeService = (function () {
-    function ResumeService(_http) {
+var HomeService = (function () {
+    function HomeService(_http) {
         this._http = _http;
     }
-    ResumeService.prototype.getResume = function () {
-        return this._http.get("http://backendapi-botello.azurewebsites.net/api/resume").map(function (r) { return r.json(); });
+    HomeService.prototype.getHomePage = function () {
+        return this._http.get("http://backendapi-botello.azurewebsites.net/api/home").map(function (r) { return r.text(); });
     };
-    ResumeService = __decorate([
+    HomeService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], ResumeService);
-    return ResumeService;
+    ], HomeService);
+    return HomeService;
 }());
-exports.ResumeService = ResumeService;
-//# sourceMappingURL=resume.service.js.map
+exports.HomeService = HomeService;
+//# sourceMappingURL=home.service.js.map

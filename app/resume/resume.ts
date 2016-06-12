@@ -20,6 +20,7 @@ export class Employment{
 
 export class Education{
     Degree: string;
+    Dates: string;
     School: string;
     Accomplishments: string[];
 }

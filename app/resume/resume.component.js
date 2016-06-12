@@ -18,7 +18,7 @@ var ResumeComponent = (function () {
     }
     ResumeComponent.prototype.getResume = function () {
         var _this = this;
-        this._resumeService.getResume().then(function (r) { return _this.myResume = r; });
+        this._resumeService.getResume().subscribe(function (r) { return _this.myResume = r; });
     };
     ResumeComponent.prototype.ngOnInit = function () {
         this.getResume();

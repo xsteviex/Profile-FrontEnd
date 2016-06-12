@@ -34,7 +34,7 @@
     <h3>Education</h3>
     <div *ngFor="#school of myResume.EducationHistory" class="row">
         <div class="col-xs-12">
-            <p><strong>{{school.Degree}}</strong> <span class="pull-right">{{school.School}}</span></p>            
+            <p><strong>{{school.Degree}}</strong> <span class="pull-right">{{school.School}}, {{school.Dates}}</span></p>            
             <ul>
                 <li *ngFor="#accomplishment of school.Accomplishments">
                     {{accomplishment}}

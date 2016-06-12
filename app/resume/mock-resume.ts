@@ -61,11 +61,12 @@ export var MyResume:Resume = {
     EducationHistory: [
         {
             Degree: "Bachelors Computer Systems / Computer Science",
-            School: "California State University - San Bernardino, 2012",
+            School: "California State University - San Bernardino",
             Accomplishments: [
                 "Lead the development of the MyCoyote Mobile Application (IOS, Android, and Windows Phone).",
                 "Top Software Engineer Award (2012)"
-            ]
+            ],
+            Dates: "2012"
         }
     ]
     
