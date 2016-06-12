@@ -15,7 +15,7 @@ var ResumeService = (function () {
         this._http = _http;
     }
     ResumeService.prototype.getResume = function () {
-        return this._http.get("http://backendapi-botello.azurewebsites.net/api/resume").map(function (r) { return r.json(); });
+        return this._http.get("http://api.steve-botello.com/resume").map(function (r) { return r.json(); });
     };
     ResumeService = __decorate([
         core_1.Injectable(), 

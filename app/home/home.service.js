@@ -15,7 +15,7 @@ var HomeService = (function () {
         this._http = _http;
     }
     HomeService.prototype.getHomePage = function () {
-        return this._http.get("http://backendapi-botello.azurewebsites.net/api/home").map(function (r) { return r.text(); });
+        return this._http.get("http://api.steve-botello.com/home").map(function (r) { return r.text(); });
     };
     HomeService = __decorate([
         core_1.Injectable(), 

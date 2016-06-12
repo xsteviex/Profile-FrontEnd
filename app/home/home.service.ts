@@ -6,6 +6,6 @@ export class HomeService{
         
     }
     getHomePage(){
-        return this._http.get("http://backendapi-botello.azurewebsites.net/api/home").map(r => r.text());
+        return this._http.get("http://api.steve-botello.com/home").map(r => r.text());
     }
 }

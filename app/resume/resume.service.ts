@@ -7,6 +7,6 @@ export class ResumeService{
         
     }
     getResume(){
-        return this._http.get("http://backendapi-botello.azurewebsites.net/api/resume").map(r => r.json())
+        return this._http.get("http://api.steve-botello.com/resume").map(r => r.json())
     }
 }
